@@ -25,7 +25,8 @@ macro_rules! alt_enum {
             $($($variant:ident $(-)?)+),*
             $(,)?
     ) => {
-        paste::paste! {
+        use paste::paste;
+        paste! {
             $(#[$attr])*
             $vis enum [<$($name:camel) +>] {
                 $([<$($variant:camel) +>]),*
@@ -62,7 +63,9 @@ macro_rules! alt_val_enum {
             $($($variant:ident $(-)?)+: $value:literal),*
             $(,)?
     ) => {
-        paste::paste! { value_enum::value_enum! { 
+        use value_enum::value_enum;
+        use paste::paste;
+        paste! { value_enum! { 
             $type =>
             $(#[$attr])*
             $vis enum [<$($name:camel)+>] {
