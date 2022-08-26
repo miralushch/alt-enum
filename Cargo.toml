@@ -1,6 +1,6 @@
 [package]
 name = "alt-enum"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "Various macros providing a more beautiful syntax for enums"
 authors = ["Мира Лущаева <miralushch@gmail.com>"]
@@ -8,7 +8,7 @@ license = "MIT"
 repository = "https://github.com/miralushch/alt-enum"
 
 [features]
-value_enum = []
+value_enum = ["value-enum"]
 
 [dependencies]
 paste = "1.0.8"

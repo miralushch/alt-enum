@@ -1,5 +1,10 @@
 //! Various macros providing more beautiful syntax for enums.
 
+pub use paste;
+
+#[cfg(feature = "value_enum")]
+pub use value_enum;
+
 /// Macro providing a more beautiful syntax for enums.
 /// 
 /// # Examples
@@ -25,8 +30,7 @@ macro_rules! alt_enum {
             $($($variant:ident $(-)?)+),*
             $(,)?
     ) => {
-        use paste::paste;
-        paste! {
+        paste::paste! {
             $(#[$attr])*
             $vis enum [<$($name:camel) +>] {
                 $([<$($variant:camel) +>]),*
@@ -63,9 +67,7 @@ macro_rules! alt_val_enum {
             $($($variant:ident $(-)?)+: $value:literal),*
             $(,)?
     ) => {
-        use value_enum::value_enum;
-        use paste::paste;
-        paste! { value_enum! { 
+        paste::paste! { value_enum::value_enum! { 
             $type =>
             $(#[$attr])*
             $vis enum [<$($name:camel)+>] {
