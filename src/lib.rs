@@ -36,7 +36,7 @@ macro_rules! alt_enum {
 
 /// Macro providing a more beautiful syntax for enums with associated values.
 /// 
-/// (using value-enum crate)
+/// (using value-enum crate, needs value_enum feature enabled)
 /// 
 /// # Examples
 /// 
