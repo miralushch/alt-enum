@@ -1,6 +1,6 @@
-//! Various macros providing a more beautiful syntax for enums.
+//! Various macros providing more beautiful syntax for enums.
 
-/// Macros providing a more beautiful syntax for enums.
+/// Macro providing a more beautiful syntax for enums.
 /// 
 /// # Examples
 /// 
@@ -34,7 +34,7 @@ macro_rules! alt_enum {
     };
 }
 
-/// Macros providing a more beautiful syntax for enums with associated values.
+/// Macro providing a more beautiful syntax for enums with associated values.
 /// 
 /// (using value-enum crate)
 /// 
