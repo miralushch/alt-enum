@@ -1,4 +1,4 @@
-# alt-enum
+# alt-enum [![](https://img.shields.io/crates/v/alt-enum.svg)](https://crates.io/crates/alt-enum)
 
 Various macros providing more beautiful syntax for enums.
 
