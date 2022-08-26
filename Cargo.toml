@@ -1,6 +1,6 @@
 [package]
 name = "alt-enum"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Various macros providing a more beautiful syntax for enums"
 authors = ["Мира Лущаева <miralushch@gmail.com>"]
