@@ -67,10 +67,9 @@ macro_rules! alt_val_enum {
             $($($variant:ident $(-)?)+: $value:literal),*
             $(,)?
     ) => {
-        $crate::paste::paste! { $crate::value_enum::value_enum! { 
-            $type =>
+        $crate::paste::paste! { $crate::value_enum::value_enum! {
             $(#[$attr])*
-            $vis enum [<$($name:camel)+>] {
+            $vis enum [<$($name:camel)+>]: $type {
                 $([<$($variant:camel)+>] = $value),*
             }
         }}
